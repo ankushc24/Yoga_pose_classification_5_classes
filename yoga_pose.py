@@ -29,14 +29,14 @@ for dir in os.listdir(test_path):
     number = len(os.listdir(test_path + dir + '/'))  # count the files on the dir
     test_distrib.append(number)  # append
 
-# plt.figure(figsize=(10, 10))
-# plt.subplot(1, 2, 1)
-# plt.pie(train_distrib, labels=class_names)
-# plt.title(f'Train - {sum(train_distrib)} files')
-# plt.subplot(1, 2, 2)
-# plt.pie(test_distrib, labels=class_names)
-# plt.title(f'Test - {sum(test_distrib)} files')
-# plt.show()
+plt.figure(figsize=(10, 10))
+plt.subplot(1, 2, 1)
+plt.pie(train_distrib, labels=class_names)
+plt.title(f'Train - {sum(train_distrib)} files')
+plt.subplot(1, 2, 2)
+plt.pie(test_distrib, labels=class_names)
+plt.title(f'Test - {sum(test_distrib)} files')
+plt.show()
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # data augmentation
